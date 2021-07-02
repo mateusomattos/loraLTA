@@ -3,12 +3,14 @@ import serial
 import pynmea2
 from datetime import datetime
 
+"""
+To use, download the app share GPS and create a USB connection using adb and tcp forward.
+Run: adb forward tcp:20175 tcp:50000
+"""
+
 ser = serial.Serial('/dev/pts/2') #LoRa serial port
 
-"""
-Run: adb forward tcp:20175 tcp:50000
-when the smartphone is connected to the PC using USB port
-"""
+
 HOST = 'localhost'  # The server's hostname or IP address
 PORT = 20175        # The port used by the server
 
